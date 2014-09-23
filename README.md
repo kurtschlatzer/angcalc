@@ -1,5 +1,5 @@
-Calculator
-==========
+AngularJS Calculator Example
+============================
 
 This is a simple calculator example built with AngularJS, HTML5, CSS3 and Bootstrap 3.
 
