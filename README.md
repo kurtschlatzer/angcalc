@@ -7,11 +7,10 @@ It only allows for addition, subtraction, multiplication and division.
 
 ###Usage
 
-1. Make sure Bower components are installed:
+Make sure Bower components are installed:
 
 ```
-  $ bower install
+$ bower install
 ```
 
-1. Open index.html in your browser.
-2. Do the math.
+Open index.html in your browser.
