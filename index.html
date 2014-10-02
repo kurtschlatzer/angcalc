@@ -10,25 +10,53 @@
     <meta name="description" content="A simple calculator built with AngularJS">
 
     <link rel="stylesheet" href="app/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="app/lib/fontawesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="app/css/app.css" rel="stylesheet" type="text/css">
+
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-394003-1', 'auto');
+      ga('send', 'pageview');
+    </script>
 
   </head>
 
   <body ng-controller="CalcController">
 
-    <div class="container calculator">
+    <div class="container">
 
-      <div class="output">{{ output }}</div>
+      <header class="text-center">
+        <h1>Simple Calculator</h1>
+      </header>
 
-      <div class="digit-buttons">
-        <btn class="btn btn-default digit" ng-repeat="digit in digits" ng-click="digitClick(digit)">{{ digit }}</btn><btn class="btn clear" ng-click="clearClick()">{{ clear }}</btn>
+      <div class="calculator">
+
+        <div class="output">{{ output }}</div>
+
+        <div class="digit-buttons">
+          <btn class="btn btn-default digit" ng-repeat="digit in digits" ng-click="digitClick(digit)">{{ digit }}</btn><btn class="btn clear" ng-click="clearClick()">{{ clear }}</btn>
+        </div>
+
+        <div class="operator-buttons">
+          <btn class="btn operator" ng-repeat="operator in operators" ng-click="operatorClick(operator)">{{ operator }}</btn>
+        </div>
+
+        <div class="btn equals" ng-click="equalsClick()">{{ equals }}</div>
+
       </div>
 
-      <div class="operator-buttons">
-        <btn class="btn operator" ng-repeat="operator in operators" ng-click="operatorClick(operator)">{{ operator }}</btn>
-      </div>
-
-      <div class="btn equals" ng-click="equalsClick()">{{ equals }}</btn>
+      <footer class="text-center">
+        <p>Built with <a href="https://angularjs.org/">AngularJS</a> &amp; <a href="http://getbootstrap.com">Bootstrap</a></p>
+        <p>
+          <a href="https://github.com/kurtschlatzer/angcalc">
+            <i class="fa fa-github-square"></i>&nbsp;Github
+          </a>
+        </p>
+      </footer>
 
     </div>
 
