@@ -2,12 +2,14 @@
 html {
   width: 100%;
   height: 100%;
+  margin: 0;
+  padding: 0;
 }
 body {
   width: 100%;
   height: 100%;
   margin: 0;
-  padding: 45px 0;
+  padding: 1em 0;
   background: -webkit-linear-gradient(0deg, #DDD 25%, #FFF 75%); /* Chrome 10+, Saf5.1+ */
   background:    -moz-linear-gradient(0deg, #DDD 25%, #FFF 75%); /* FF3.6+ */
   background:     -ms-linear-gradient(0deg, #DDD 25%, #FFF 75%); /* IE10 */
@@ -18,6 +20,16 @@ body {
   font-weight: 400;
   line-height: 1.5;
   color: #555;
+}
+header, footer {
+  text-align: center;
+}
+header {
+  margin: 0 0 1em 0;
+}
+footer {
+  margin: 1em 0;
+  font-size: .75em;
 }
 .calculator {
   width: 315px;
